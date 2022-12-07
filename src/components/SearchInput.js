@@ -1,6 +1,7 @@
 import React from "react";
 
 const SearchInput=({inputText, setInputText}) => {
+
     const handleChange=(e ) => {
         var lowerCase=e.target.value.toLowerCase()
         setInputText(lowerCase)
@@ -9,7 +10,7 @@ const SearchInput=({inputText, setInputText}) => {
     const handleSubmit=(e) => {
         e.preventDefault()
     }
-    return(
+    return (
         <form onSubmit={handleSubmit} className="ui form">
         <div className="search-input">
             <input 

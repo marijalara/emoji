@@ -33,7 +33,7 @@ body {
   width: 99%; 
 }
 input {
-  margin-left: 5px;
+  margin-left: 9px;
   margin-right: 5px;
 }
 .list .item {
@@ -50,6 +50,12 @@ input {
   row-gap: 100px;
   flex-direction: column;
 }
+.list .item:hover {
+  background-color: #eee;
+}
+div {
+  display: block;
+}
 .item symbol {
   width: 32px;
   height: 32px;
@@ -57,4 +63,14 @@ input {
 .item title {
   width: 32px;
   height: 32px;
+}
+.list .info {
+  float: right;
+  position: relative;
+  top: 8px;
+  color: #ccc;
+  display: none;
+}
+.item:hover .info{
+  display: inline-block;
 }
