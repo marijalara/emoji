@@ -1,9 +1,11 @@
 import React from "react";
 
-const SearchInput=({text, setText}) => {
-    const handleChange=(e, ) => {
-        setText(e.target.value)
+const SearchInput=({inputText, setInputText}) => {
+    const handleChange=(e ) => {
+        var lowerCase=e.target.value.toLowerCase()
+        setInputText(lowerCase)
     }
+    
     const handleSubmit=(e) => {
         e.preventDefault()
     }
@@ -12,7 +14,7 @@ const SearchInput=({text, setText}) => {
         <div className="search-input">
             <input 
                 type="text"
-                value={text}
+                value={inputText}
                 onChange={handleChange}
             />
         </div>

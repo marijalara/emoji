@@ -6,16 +6,17 @@ import InputList from "./InputList";
 
 const App=() => {
     // var emoji = require('emoji.json')
-    const [text, setText]=useState('')
+    const [inputText, setInputText]=useState('')
+
     
     return(
         <div>
             <Header />
             <SearchInput 
-                text={text} 
-                setText={setText}
+                inputText={inputText} 
+                setInputText={setInputText}
             />
-            <InputList />
+            <InputList inputText={inputText} setInputText={setInputText}/>
         </div>
     )
 }

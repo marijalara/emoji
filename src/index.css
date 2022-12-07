@@ -30,18 +30,31 @@ body {
   padding-right: 8px;
   padding-bottom: 10px;
   padding-left: 8px;
-  width: 100%; 
+  width: 99%; 
 }
 input {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
-.list {
+.list .item {
   border-bottom: 1px solid #ccc;
-  padding: 10px;
-  height: 32px;
+  border-top: 1px solid #ccc;
+  padding: 0;
+  height: 45px;
   position: relative;
   cursor: pointer;
   font-family: sans-serif;
+  top: -3px;
+  margin: 0;
+  list-style-type: none;
+  row-gap: 100px;
+  flex-direction: column;
 }
-
+.item symbol {
+  width: 32px;
+  height: 32px;
+}
+.item title {
+  width: 32px;
+  height: 32px;
+}
