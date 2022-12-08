@@ -36,8 +36,12 @@ input {
   margin-left: 9px;
   margin-right: 5px;
 }
+.container {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
 .list .item {
-  border-bottom: 1px solid #ccc;
   border-top: 1px solid #ccc;
   padding: 0;
   height: 45px;
@@ -45,10 +49,16 @@ input {
   cursor: pointer;
   font-family: sans-serif;
   top: -3px;
-  margin: 0;
+  margin: auto;
   list-style-type: none;
   row-gap: 100px;
   flex-direction: column;
+  width: 100%;
+}
+.item {
+  position: relative;
+  line-height: 50px;
+  vertical-align: middle;
 }
 .list .item:hover {
   background-color: #eee;
@@ -70,6 +80,8 @@ div {
   top: 8px;
   color: #ccc;
   display: none;
+  line-height: 35px;
+  vertical-align: middle;
 }
 .item:hover .info{
   display: inline-block;

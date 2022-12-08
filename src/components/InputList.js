@@ -12,13 +12,14 @@ const InputList=({inputText}) => {
     })
     
     return(
-        <ul className="list">
+        <div className="list">
+            <br/>
             {filteredData.splice(0, 20).map((item) =>(
-                <li className="item" key={item.title}>{item.symbol} {item.title}
+                <div className="item" key={item.title}>{item.symbol} {item.title}
                 <div className="info" onClick={() =>{navigator.clipboard.writeText(item.symbol)}}>Click to copy emoji</div>
-                </li>
+                </div>
             ))}
-        </ul>
+        </div>
     )
 }
 
