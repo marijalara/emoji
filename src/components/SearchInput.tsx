@@ -1,13 +1,17 @@
-import React from "react";
+import React from 'react';
 
-const SearchInput=({inputText, setInputText}) => {
+interface SearchInputProps {
+    inputText: string;
+    setInputText: React.Dispatch<React.SetStateAction<string>>;
+}
 
-    const handleChange=(e ) => {
+const SearchInput: React.FC<SearchInputProps> = ({inputText, setInputText}) => {
+    const handleChange=(e: React.ChangeEvent<HTMLInputElement>) => {
         var lowerCase=e.target.value.toLowerCase()
         setInputText(lowerCase)
     }
-    
-    const handleSubmit=(e) => {
+
+    const handleSubmit=(e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
     }
     return (
